@@ -11,26 +11,24 @@ let customDigit = ['0','1','2','3','4','5','6','7','8','9'] */
 
  let randomYear = ""
 function yearGenerator(title) {
-        if (title[0]  === "a" || title[0] === "b" || title[0] === "c" || title[0] === "d" || title[0] === "e" || title[0] === "f"  ) {                                   // 1. digit must be 1 or 2 
+        if (title[0]  === "a" || title[0] === "b" || title[0] === "c" || title[0] === "d" || title[0] === "e" || title[0] === "f" || title[0] === "n" || title[0] === "m"  ) {                                   // 1. digit must be 1 or 2 
             randomYear += "1" 
         } else {
             randomYear += "2"
         }
-
        if (randomYear[0] === "1" ){   // if 1.digit = 1 second digit must be 9, if starts with 2 mustbe0,  2.digit code
         randomYear += "9"
        } else   {                 
         randomYear += "0"
-       } 
-
+       }
       if (randomYear[0] + randomYear[1] === "19" && title[1] === "n" || title[1] === "m"  ) {
         randomYear += "4"
       } else if (randomYear[0] + randomYear[1] === "19" && title[1] === "o"|| title[1] === "q"){
         randomYear += "7"                                                                              // 3.digit code if starts with 19
       }else if (randomYear[0] + randomYear[1] === "19" && title[1] === "v" || title[1] === "t") {
         randomYear += "2"
-      } else if (randomYear[0] + randomYear[1] === "19" && title[1] === "d" || title[1] === "a" ) {
-        randomYear += "8"
+      } else if (randomYear[0] + randomYear[1] === "19" && title[2] === "d" || title[2] === "x" ) {
+        randomYear += "5"
       }   else if (randomYear[0] + randomYear[1] === "20" && title[2] === "r" || title[2] === "s" ||title[2] === "t" ){ // 3 digit if strats with 20
         randomYear += "1"
       } else if (randomYear[0] + randomYear[1] === "20" && title[2] === "u" || title[2] === "e" ||  title[2] === "d"){
@@ -38,7 +36,6 @@ function yearGenerator(title) {
       }else {
         randomYear += "0"
       } 
-
       if (randomYear[2] === "0" ) {
         randomYear += "2"
       } else if (randomYear[2] === "1"){
@@ -54,14 +51,8 @@ function yearGenerator(title) {
       }else {
         randomYear += "0"
       }
-
       // ha az elso ketto szamjegy 19 es title b v sd f =>
       // ha az elso ketto szamjegy 20 es title c d b g =>
-
-
        console.log(randomYear)
     }
-
-       
-
-yearGenerator("terminator") 
+yearGenerator("asdnagbba asdasd") 
